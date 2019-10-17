@@ -1,3 +1,4 @@
 <!--pages/map/map.wxml-->
 <text>pages/map/map.wxml</text>
 <map id="first"></map>
+<view>ok</view>
