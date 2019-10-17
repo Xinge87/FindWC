@@ -1,0 +1,25 @@
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <map
+      id="myMap"
+      style="width: 100%; height: 300px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location
+    ></map>
+  </view>
+  <view class="btn-area">
+
+    <view wx:for="{{addressList}}">
+        <form bindsubmit="openLocation" id="form{{index}}">
+          <input type="text" hidden="true" name="longitude" value="{{item.longitude}}"></input>
+          <input type="text" hidden="true" name="latitude" value="{{item.latitude}}"></input>
+           <input type="text" hidden="true" name="title" value="{{item.title}}"></input>
+          <button type="primary" form-type="submit">导航到{{item.title}}</button>
+        </form>
+    </view>
+   
+  </view>
+</view>
