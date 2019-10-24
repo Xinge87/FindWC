@@ -1,2 +1,1 @@
-# FindW
-Hello World!
+# FindWC
