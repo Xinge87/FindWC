@@ -34,12 +34,12 @@ Page({
     var _this = this;
     // 调用接口
     qqmapsdk.search({
-      keyword: 'kfc',  //搜索关键词
+      keyword: '厕所',  //搜索关键词
       success: function (res) { //搜索成功后的回调
         var mks = []
         for (var i = 0; i < res.data.length; i++) {
           mks.push({ // 获取返回结果，放到mks数组中
-            title: res.data[i].title,
+            title: res.data[i].address,
             id: res.data[i].id,
             latitude: res.data[i].location.lat,
             longitude: res.data[i].location.lng,

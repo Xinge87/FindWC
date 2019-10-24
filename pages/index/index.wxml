@@ -12,7 +12,7 @@
   </view>
   <view class="btn-area">
 
-    <view wx:for="{{addressList}}">
+    <view wx:for="{{addressList}}" wx:key="*this">
         <form bindsubmit="openLocation" id="form{{index}}">
           <input type="text" hidden="true" name="longitude" value="{{item.longitude}}"></input>
           <input type="text" hidden="true" name="latitude" value="{{item.latitude}}"></input>
@@ -20,6 +20,6 @@
           <button type="primary" form-type="submit">导航到{{item.title}}</button>
         </form>
     </view>
-   
+   <navigator url="/pages/upload/upload">试一试好不好</navigator>
   </view>
 </view>
